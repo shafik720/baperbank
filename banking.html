@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .division{height: 150px; color: white;}
+        .division2{height: 250px; color: white; }
+        .para{display: none;}
+    </style>
+</head>
+<body>
+    <h1 class="text-center mt-4">Let get some <span class="text-primary">Money</span>  !</h1>
+
+    <section>
+        <div class="container row mx-auto mt-5">
+            <div class="col-4 bg-primary division text-center rounded pt-4">
+                <h4>Deposit</h4>
+                <h2>$ <span id="deposit-amount">00</span> </h2>
+            </div>
+            <div class="col-4 bg-warning division text-center rounded pt-4 my-1">
+                <h4>Withdraw</h4>
+                <h2>$ <span id="withdraw-amount">00</span> </h2>
+            </div>
+            <div class="col-4 bg-info division text-center rounded pt-4">
+                <h4>Balance</h4>
+                <h2>$ <span id="balance">1200</span> </h2>
+            </div>
+        </div>
+        <p class="para" id="para" style="text-align: center; color: red;margin-top:10px;">Please input valid amount !</p>
+        <div class="row container mx-auto mt-2 d-flex justify-content-even">
+            <div class="col-6 division2 bg-secondary bg-gradient d-flex flex-column align-items-center justify-content-center rounded">
+                <h5 >Please Deposit:</h5>
+                <input  class="form-control mt-3" id="deposit-text" placeholder="Deposit Amount" style="width: 50%;">
+                <button id="deposit" class="btn btn-danger mt-3">Deposit</button>
+            </div>
+            <div class="col-6 division2 bg-success bg-gradient d-flex flex-column align-items-center justify-content-center rounded " >
+                <h5 >Please Withdraw:</h5>
+                <input class="form-control mt-3" id="withdraw-text" placeholder="Withdraw Amount" style="width: 50%;">
+                <button id="withdraw" class="btn btn-warning mt-3">Withdraw</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="banking.js"></script>
+</body>
+</html>

@@ -6,10 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baper Bank</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .message{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1 class="text-center mt-5">Welcome to <span class="text-danger">Baper Bank</span>  !</h1>
+
+    <section style="width: 600px; height: 400px;" class="container bg-warning text-center mt-3">
+        <h2 class="py-5">Log In</h2>
+        <input id="email" class="form-control" type="text" placeholder="Your Email" aria-label="default input example"  style="width: 70%; margin: auto;">
+        <input type="password" class="form-control my-3" placeholder="Password" id="password" style="width: 70%; margin: auto;">
+        <button id="logButton" type="button" class="btn btn-success">Login</button>
+        <p id="message" style="color: red; margin-top: 20px;" class="message">Wrong id ! Try again </p>
+
+    </section>
+
+
+
+
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>
