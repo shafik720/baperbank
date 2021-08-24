@@ -5,7 +5,7 @@ function value(inputText,outputText){
     let depositAmount = document.getElementById(outputText+'-amount');
     let para = document.getElementById('para');
     if(depositTextValue>0){
-        depositAmount.innerText =  depositText.value
+        depositAmount.innerText = parseFloat(depositText.value) + parseFloat(depositAmount.innerText);
         para.setAttribute('class', 'para');
     }else{
         para.removeAttribute('class');
@@ -22,9 +22,24 @@ function balance(exist){
     let totalBalance = existingAmount+existingBalance;
     existingBalances.innerText = totalBalance;
 }
-function balanceWithdraw(exist){
-    let existingAmounts = document.getElementById(exist+'-amount');
-    let existingAmount = parseFloat(existingAmounts.innerText) ;
+function balanceRestriction(){
+    let totalbalances = document.getElementById('balance');
+    let totalblances2 = parseFloat(totalbalances.innerText)
+    let withdrawAmount = document.getElementById('withdraw-text');
+    let withdrawAmount2 = parseFloat(withdrawAmount.value );
+    if( withdrawAmount2 < totalblances2 && withdrawAmount2>0 ){
+        balanceWithdraw();
+        value('withdraw','withdraw');
+        
+        console.log('bigger than 0');
+    }else{
+        console.log('less than 0');
+    }
+}
+function balanceWithdraw(){
+    let existingAmounts = document.getElementById('withdraw-text');
+    let existingAmount = parseFloat(existingAmounts.value)  ;
+    
     let existingBalances = document.getElementById('balance');
     let existingBalance = parseFloat(existingBalances.innerText);
     
@@ -38,6 +53,10 @@ document.getElementById('deposit').addEventListener('click', function(){
 })
 
 document.getElementById('withdraw').addEventListener('click', function(){
-    value('withdraw', 'withdraw');
-    balanceWithdraw('withdraw');
+    
+    balanceRestriction();
+    // let existingAmounts = document.getElementById('withdraw-text');
+    // let existingAmount = parseFloat(existingAmounts.value)  ;
+    // console.log(existingAmount);
+    // value('withdraw', 'withdraw');
 })
